@@ -4,7 +4,7 @@ import './App.css';
 import NavbarComp from './component/navigation/NavbarComp';
 import * as api from './services/api';
 
-    ...
+    
 
     const [authenticated, setAuthenticated] = useState(false);
     const [username, setUsername] = useState();
