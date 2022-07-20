@@ -18,40 +18,40 @@ import * as api from './services/api';
         await api.createUser(username, password);
     }
 
-    return (
-        <div className="App">
-            {!authenticated ? (
-                <div>
-                    <label>Username: </label>
-                    <br />
-                    <input
-                        type="text"
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                    <br />
-                    <label>Password: </label>
-                    <br />
-                    <input
-                        type="password"
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <br />
-                    <button onClick={createUser}>Create User</button>
-                    <button onClick={authUser}>Login</button>
-                </div>
-            ) : (
-                <div className="App">
-                    <NavbarComp />
-                </div>
-            )}
-        </div>
-    );
+   
+
 function App() {
+
+
   return (
     <div className="App">
-      <NavbarComp/>
+        {!authenticated ? (
+            <div>
+                <label>Username: </label>
+                <br />
+                <input
+                    type="text"
+                    onChange={(e) => setUsername(e.target.value)}
+                />
+                <br />
+                <label>Password: </label>
+                <br />
+                <input
+                    type="password"
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+                <br />
+                <button onClick={createUser}>Create User</button>
+                <button onClick={authUser}>Login</button>
+            </div>
+        ) : (
+            <div className="App">
+                <NavbarComp />
+            </div>
+        )}
     </div>
-  );
+);
 }
+
 
 export default App;
